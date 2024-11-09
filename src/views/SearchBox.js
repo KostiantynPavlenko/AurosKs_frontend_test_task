@@ -6,8 +6,6 @@ export class SearchBox{
 
         this.render();
         this.attachEventHandlers();
-        console.log("SEARCH created");
-        
     }
 
     render(){
@@ -153,7 +151,6 @@ export class SearchBox{
 
         this.dropdown.querySelectorAll(".dropdown-item").forEach(item => {
             item.addEventListener("click", () => {
-                console.log("Selected:", item.textContent);
                 this.searchInput.value = item.textContent;
                 this.hideDropdown();
             });
